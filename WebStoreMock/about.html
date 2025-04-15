@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ace of Clubs</title>
+    <link rel="icon" type="image/x-icon" href="clover_6867574.png" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li class="listItems">
+          <a href="index.html"><button id="button">Home</button></a>
+        </li>
+        <li class="listItems">
+          <a href="shop.html"><button id="button">Shop</button></a>
+        </li>
+        <li class="listItems">
+          <a href="index.html"><button id="button">Cart</button></a>
+        </li>
+        <li class="listItems">
+          <a href="about.html"><button id="button">About</button></a>
+        </li>
+      </ul>
+      <h1 id="headerTitleOutline">
+        <a href="index.html" id="logo"
+          ><img
+            id="logoImage"
+            src="clover_6867574.png"
+            alt="Ace of Clubs Image"
+            style="width: 44px; height: 44px"
+        /></a>
+      </h1>
+      <button id="loginBtn"">
+        Log in / Register
+      </button>
+    </header>
+
+    <div id="modularWindow" class="hidden ">
+      <button id="modularWindowCloseBtn">X</button>
+      <form action="submit" id="loginForm">
+        <fieldset id="loginFieldSet">
+          <legend>Login</legend>
+          <label for="usernameInput" class="loginLabel">Username:</label>
+          <input type="text" name="username" id="usernameInput" class="loginInput">
+          <label for="passwordInput" class="loginLabel">Password:</label>
+          <input type="password" name="password" id="passwordInput" class="loginInput">
+        </fieldset>
+        <button type="submit" id="subitBtn">Log in</button>
+        <button type="button" id="registerBtn">Don't have an account? Register here</button>
+      </form>
+    </div>
+
+
+    <div id="mainHomeContainer" class="mainContainers">
+      <h2 class="mainText">Lorem Ipsum</h2>
+      <p class="mainText">Lorem ipsum dolor sit amet Qui soluta.<br>
+        voluptas cum nobis pariatur qui similique sint sit magnam quam. <br>
+        Aut ipsa quas quo quia quia qui natus facere ea dolor <br>
+        Quis qui laboriosam modi ut rerum voluptates eos<br>
+        voluptatem velit! Et sunt rerum et ducimus ducimus vel <br>
+        veritatis internos eos veniam omnis quo provident<br>
+        quis ut galisum harum non suscipit debitis.<br>
+        Rem itaque veritatis sit natus mollitia At fugiat <br>
+        natus qui aliquid eligendi non internos eligendi et <br>
+        do et internos quia ut dolore nulla? Sit rerum error <br>
+        ut beatae accusantium sit beatae impedit sed incidunt<br>
+        quia ad ipsa enim. Et exercitationem veritatis qui <br>
+        eligendi laboriosam qui dolores nihil ex temporibus<br>
+        modi sit nihil itaque ab quis alias! Et nostrum tempore <br>
+        qui iusto quam sit atque voluptatem quo nobis<br>
+        alias vel dolor deleniti At iste mollitia. Quo natus <br>
+        mollitia ea dolor necessitatibus et nobis <br>
+        necessitatibus in accusamus eveniet qui quia maxime est<br>
+         quam veniam? Aut quasi perspiciatis hic <br>
+        saepe quam et architecto quisquam. Vel galisum temporibus <br>
+        est beatae magnam id praesentium quam est<br>
+        labore dolor.</p>
+        <img id="mainImage" src="images/mementormori.png" alt="Cardistry image"">
+    </div>
+
+
+    <footer>
+      <p id="footerText">
+        All rights reserved <br />
+        Gvidas Kalvonis© 2025
+      </p>
+    </footer>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
