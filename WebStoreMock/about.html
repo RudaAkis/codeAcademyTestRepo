@@ -7,7 +7,7 @@
     <title>Ace of Clubs</title>
     <link rel="icon" type="image/x-icon" href="clover_6867574.png" />
   </head>
-  <body>
+  <body style="background-image: linear-gradient(rgba(0, 0, 0, 0.144), rgba(0, 0, 0, 0.082))">
     <header>
       <ul>
         <li class="listItems">
@@ -29,28 +29,13 @@
             id="logoImage"
             src="clover_6867574.png"
             alt="Ace of Clubs Image"
-            style="width: 44px; height: 44px"
+            style="width: 44px; height: 44px;"
         /></a>
       </h1>
       <button id="loginBtn"">
         Log in / Register
       </button>
     </header>
-
-    <div id="modularWindow" class="hidden ">
-      <button id="modularWindowCloseBtn">X</button>
-      <form action="submit" id="loginForm">
-        <fieldset id="loginFieldSet">
-          <legend>Login</legend>
-          <label for="usernameInput" class="loginLabel">Username:</label>
-          <input type="text" name="username" id="usernameInput" class="loginInput">
-          <label for="passwordInput" class="loginLabel">Password:</label>
-          <input type="password" name="password" id="passwordInput" class="loginInput">
-        </fieldset>
-        <button type="submit" id="subitBtn">Log in</button>
-        <button type="button" id="registerBtn">Don't have an account? Register here</button>
-      </form>
-    </div>
 
 
     <div id="mainHomeContainer" class="mainContainers">
@@ -78,6 +63,46 @@
         est beatae magnam id praesentium quam est<br>
         labore dolor.</p>
         <img id="mainImage" src="images/mementormori.png" alt="Cardistry image"">
+    </div>
+
+    <!-- Login form -->
+    <div class="modularWindow hidden" id="loginModularWindow">
+      <button id="modularWindowCloseBtn">X</button>
+      <form action="submit" id="loginForm">
+        <fieldset id="loginFieldSet">
+          <legend>Login</legend>
+          <label for="usernameInput" class="loginLabel">Username:</label>
+          <input type="text" name="username" id="usernameInput" class="loginInput" placeholder="john123">
+          <label for="passwordInput" class="loginLabel">Password:</label>
+          <input type="password" name="password" id="passwordInput" class="loginInput">
+        </fieldset>
+        <button type="submit" id="submitBtn">Log in</button>
+        <button type="button" id="registerBtn">Don't have an account? Register here</button>
+      </form>
+    </div>
+
+    <div class="modularWindow hidden" id="registrationModularWindow">
+      <button id="registerWindowCloseBtn">X</button>
+      <!-- Registration form -->
+      <form action="submit" id="registerForm">
+        <fieldset id="loginFieldSet">
+          
+          <legend>Register</legend>
+          <label for="usernameInput" id="registerUsernameInput" class="loginLabel">Username:</label>
+          <input type="text" name="rusername" id="rUsernameInput" class="loginInput" placeholder="john123">
+
+          <label for="emailInput" class="loginLabel">Email:</label>
+          <input type="email" id="emailInput" class="loginInput" placeholder="john@gmail.com">
+
+          <label for="passwordInput" class="loginLabel">Password:</label>
+          <input type="password" name="password" id="passwordInput" class="loginInput">
+
+          <label for="passwordInput" class="loginLabel">Repeat password:</label>
+          <input type="password" name="password" id="passwordInputRepeat" class="loginInput">
+        </fieldset>
+        <button type="submit" id="submitBtn">Register</button>
+        <button type="button" id="loginswitchBtn">Already Registered? Log in</button>
+      </form>
     </div>
 
 

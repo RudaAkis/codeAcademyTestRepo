@@ -1,19 +1,22 @@
 /* * {
   outline: 2px solid red;
 } */
-
+* {
+  box-sizing: border-box;
+}
 body,
 html {
   margin: 0px;
   padding: 0px;
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.144), rgba(0, 0, 0, 0.082));
 }
 
 /* This used the > selected which means select all childred of the element privided
 In this case select all children of body element if body has the class blurred
 :not means exclude the element/s in the brackets in this case the modular window  */
-body.blurred > :not(#modularWindow) {
+body.blurred > :not(.modularWindow) {
   filter: blur(2px);
   transition: filter 0.1s ease;
 }
@@ -85,7 +88,7 @@ footer {
   visibility: hidden;
 }
 
-#modularWindow {
+.modularWindow {
   position: absolute;
   left: 30%;
   top: 20%;
@@ -104,7 +107,7 @@ footer {
 
 .loginInput,
 .loginLabel,
-#subitBtn,
+#submitBtn,
 legend {
   height: 4vh;
   font-size: larger;
@@ -130,7 +133,7 @@ legend {
 .loginLabel {
   width: 60%;
 }
-#subitBtn {
+#submitBtn {
   width: 40%;
   height: 5vh;
   margin: 3% 30%;
@@ -140,17 +143,18 @@ legend {
   border-radius: 15px;
   color: #bcd979;
 }
-#subitBtn:hover {
+#submitBtn:hover {
   background-color: rgb(87, 70, 48);
   border-radius: 10px;
   height: 5.5vh;
 }
-#subitBtn:active {
+#submitBtn:active {
   background-color: rgba(129, 106, 74, 0.712);
   border-radius: 20px;
   height: 5vh;
 }
-#registerBtn {
+#registerBtn,
+#loginswitchBtn {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: rgba(245, 222, 179, 0);
@@ -158,14 +162,17 @@ legend {
   margin: 0 300px;
   cursor: pointer;
 }
-#registerBtn:hover {
+#registerBtn:hover,
+#loginswitchBtn:hover {
   color: #362a22;
 }
-#registerBtn:active {
+#registerBtn:active,
+#loginswitchBtn:hover {
   color: #9dad6f;
 }
 
-#modularWindowCloseBtn {
+#modularWindowCloseBtn,
+#registerWindowCloseBtn {
   border: 0;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.493);
@@ -174,10 +181,12 @@ legend {
   font-size: large;
   border-radius: 21px 0 21px 0;
 }
-#modularWindowCloseBtn:hover {
+#modularWindowCloseBtn:hover,
+#registerWindowCloseBtn:hover {
   background-color: rgba(170, 0, 0, 0.582);
 }
-#modularWindowCloseBtn:active {
+#modularWindowCloseBtn:active,
+#registerWindowCloseBtn:active {
   background-color: rgba(170, 0, 0, 0.747);
 }
 
@@ -256,7 +265,7 @@ li {
   margin: 7% auto;
   font-size: 400%;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 2.5%;
   border-radius: 50%;
   border: 2px solid #9dad6f;
   text-shadow: 2px 2px 20px #9dad6f;
@@ -268,9 +277,6 @@ li {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-#homeImage {
-  image-resolution: initial;
 }
 
 #mainImage {
@@ -363,5 +369,18 @@ li {
     margin: 0;
     background-color: rgba(255, 0, 0, 0);
     width: 100%;
+  }
+  #mainPageHeading {
+    background-color: #362a22b4;
+    width: 90%;
+    height: 40vh;
+    color: #c3dfe0;
+    margin: 15% auto;
+    font-size: 300%;
+    text-align: center;
+    padding-top: 15%;
+    border-radius: 50%;
+    border: 2px solid #9dad6f;
+    text-shadow: 2px 2px 20px #9dad6f;
   }
 }

@@ -16,26 +16,62 @@
 // });
 document.addEventListener("DOMContentLoaded", () => {
   //Create all three needed objects
-  const modularWindow = document.getElementById("modularWindow");
+  const loginModularWindow = document.getElementById("loginModularWindow");
   const loginBtn = document.getElementById("loginBtn");
-  const closeBtn = document.getElementById("modularWindowCloseBtn");
+  const loginCloseBtn = document.getElementById("modularWindowCloseBtn");
+  const registerCloseBtn = document.getElementById("registerWindowCloseBtn");
+  const registerModularWindow = document.getElementById(
+    "registrationModularWindow"
+  );
 
   //Add an event listener to the login button upon loading the DOM content
   //Event listener will either add or remove the css class name to apply the style
   loginBtn.addEventListener("click", () => {
-    modularWindow.classList.toggle("hidden");
+    loginModularWindow.classList.toggle("hidden");
     document.body.classList.toggle("blurred");
   });
 
-  closeBtn.addEventListener("click", () => {
-    modularWindow.classList.toggle("hidden");
+  loginCloseBtn.addEventListener("click", () => {
+    loginModularWindow.classList.add("hidden");
+    registerModularWindow.classList.add("hidden");
+    document.body.classList.toggle("blurred");
+  });
+
+  registerCloseBtn.addEventListener("click", () => {
+    registerModularWindow.classList.add("hidden");
     document.body.classList.toggle("blurred");
   });
   //Event listener
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !modularWindow.classList.contains("hidden")) {
-      modularWindow.classList.add("hidden");
+    if (
+      (event.key === "Escape" &&
+        !loginModularWindow.classList.contains("hidden")) ||
+      (event.key === "Escape" &&
+        !registerModularWindow.classList.contains("hidden"))
+    ) {
+      loginModularWindow.classList.add("hidden");
+      registerModularWindow.classList.add("hidden");
       document.body.classList.remove("blurred");
     }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const registerButton = document.getElementById("registerBtn");
+  const loginButton = document.getElementById("loginswitchBtn");
+  const loginModularWindow = document.getElementById("loginModularWindow");
+  const registerModularWindow = document.getElementById(
+    "registrationModularWindow"
+  );
+
+  registerButton.addEventListener("click", () => {
+    console.log("Button clicked");
+    registerModularWindow.classList.toggle("hidden");
+    loginModularWindow.classList.toggle("hidden");
+  });
+
+  loginButton.addEventListener("click", () => {
+    registerModularWindow.classList.toggle("hidden");
+    loginModularWindow.classList.toggle("hidden");
   });
 });
