@@ -1,0 +1,61 @@
+body {
+	background-color: rgb(136, 165, 155);
+}
+
+table {
+	border: 2px solid black;
+	border-collapse: collapse;
+	width: 200px;
+	margin: 2em auto;
+}
+tr:nth-child(odd) {
+	background-color: rgba(137, 43, 226, 0.295);
+}
+tr:nth-child(even) {
+	background-color: rgba(86, 86, 153, 0.541);
+}
+td:nth-child(odd) {
+	background-color: rgba(73, 25, 119, 0.185);
+}
+tr:nth-child(even) {
+	background-color: rgba(86, 86, 153, 0.541);
+}
+tr:nth-child(odd) {
+	background-color: rgba(50, 50, 151, 0.541);
+}
+
+#userTable * {
+	border: 2px solid black;
+}
+form {
+	width: 40%;
+	height: 26vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: rgba(68, 145, 145, 0.623);
+	gap: 1em;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#buttonContainer {
+	grid-column: 1 / -1; /* Span across all columns */
+	display: flex;
+	justify-content: center; /* Center horizontally */
+	padding-top: 10px;
+}
+#submitBtn {
+	width: 40%;
+	min-width: 60px;
+}
+
+td {
+	padding: 1em;
+}
+
+#keyNumber {
+	background-color: chartreuse;
+}
+ul {
+	margin: 0 auto;
+}

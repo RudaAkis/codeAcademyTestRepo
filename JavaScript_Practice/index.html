@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="userFormContainer">
+			<form id="fillTableForm">
+				<label for="name"> Name</label>
+				<input type="text" name="name" id="name" />
+				<label for="age">Age</label>
+				<input type="number" name="age" id="age" />
+				<div id="buttonContainer">
+					<button type="submit" id="submitBtn">Add user</button>
+				</div>
+			</form>
+		</div>
+
+		<table id="formDataTable">
+			<th>Name</th>
+			<th>Age</th>
+		</table>
+
+		<div id="formContainer">
+			<form id="multiplicationDataForm">
+				<label for="width">
+					Enter the width of the grid that you want to create the
+					multiplication table for</label
+				>
+				<input type="number" name="width" id="width" />
+				<label for="height">
+					Enter the height of the grid that you want to create the
+					multiplication table for</label
+				>
+				<input type="number" name="height" id="height" />
+				<label for="number"
+					>Enter the number you want to find in the table</label
+				>
+				<input type="number" name="number" id="number" />
+				<div id="buttonContainer">
+					<button type="submit" id="submitBtn">Create</button>
+				</div>
+			</form>
+		</div>
+
+		<script src="js.js"></script>
+	</body>
+</html>
